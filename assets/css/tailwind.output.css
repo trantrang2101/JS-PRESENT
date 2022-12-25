@@ -587,6 +587,9 @@ video {
 .fill-white {
   fill: #fff;
 }
+.dark\:fill-gray-800 {
+  fill: #1a1c23;
+}
 .leading-10 {
   line-height: 2.5rem; /* 16px */
 }
