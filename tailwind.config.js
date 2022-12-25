@@ -3,6 +3,10 @@ const plugin = require('tailwindcss/plugin')
 const Color = require('color')
 
 module.exports = {
+  content: [
+    "./src/**/*.{html,js,svelte,ts}",
+    "./node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}",
+  ],
   purge: ['public/**/*.html'],
   theme: {
     themeVariants: ['dark'],
@@ -199,6 +203,7 @@ module.exports = {
   },
   plugins: [
     require('tailwindcss-multi-theme'),
+    require('flowbite/plugin'),
     require('@tailwindcss/custom-forms'),
     plugin(({
       addUtilities,

@@ -13,18 +13,26 @@
       src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
       defer
     ></script>
+    <link
+      href="https://unpkg.com/tailwindcss@1.0.4/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="icon" href="./assets/img/logo.png" />
+    <script src="./node_modules/flowbite/dist/flowbite.js"></script>
     <script src="./assets/js/init-alpine.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/image.js"></script>
+
+    <script src="./node_modules/flowbite/dist/flowbite.js"></script>
   </head>
   <body>
     <div
       class="flex h-screen bg-gray-50 dark:bg-gray-900"
       :class="{ 'overflow-hidden': isSideMenuOpen }"
     >
-      <!-- Desktop sidebar -->
       <aside
-        class="z-20 hidden w-64 overflow-y-auto bg-gray-300 dark:bg-gray-800 md:block flex-shrink-0"
+        class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
       >
         <div class="py-4 text-gray-500 dark:text-gray-400">
           <a
@@ -40,12 +48,8 @@
           </a>
           <ul class="mt-6">
             <li class="relative px-6 py-3">
-              <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
-                aria-hidden="true"
-              ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#recruit"
               >
                 <svg
@@ -67,7 +71,7 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#about"
               >
                 <svg
@@ -89,7 +93,7 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#timeline"
               >
                 <svg
@@ -111,7 +115,7 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#contact"
               >
                 <svg
@@ -135,7 +139,7 @@
           </ul>
           <div class="px-6 my-6">
             <button
-              class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+              class="flex items-center justify-between w-full px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
             >
               Đăng ký ngay
               <span class="ml-2" aria-hidden="true">+</span>
@@ -156,7 +160,7 @@
         class="fixed inset-0 z-10 flex items-end bg-black bg-opacity-50 sm:items-center sm:justify-center"
       ></div>
       <aside
-        class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-gray-300 dark:bg-gray-800 md:hidden"
+        class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
         x-show="isSideMenuOpen"
         x-transition:enter="transition ease-in-out duration-150"
         x-transition:enter-start="opacity-0 transform -translate-x-20"
@@ -182,11 +186,11 @@
           <ul class="mt-6">
             <li class="relative px-6 py-3">
               <span
-                class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg"
+                class="absolute inset-y-0 left-0 w-1 bg-red-600 rounded-tr-lg rounded-br-lg"
                 aria-hidden="true"
               ></span>
               <a
-                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 dark:text-gray-100"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#recruit"
               >
                 <svg
@@ -208,7 +212,7 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#about"
               >
                 <svg
@@ -230,7 +234,7 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#timeline"
               >
                 <svg
@@ -252,7 +256,7 @@
             </li>
             <li class="relative px-6 py-3">
               <a
-                class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
+                class="inline-flex items-center w-full text-sm font-semibold text-gray-800 transition-colors duration-150 hover:text-red-600 dark:hover:text-gray-200 dark:text-gray-100 active:text-red-600"
                 href="#contact"
               >
                 <svg
@@ -276,7 +280,7 @@
           </ul>
           <div class="px-6 my-6">
             <button
-              class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple"
+              class="flex items-center justify-between px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red"
             >
               Đăng ký ngay
               <span class="ml-2" aria-hidden="true">+</span>
@@ -285,12 +289,12 @@
         </div>
       </aside>
       <div class="flex flex-col flex-1 w-full">
-        <header class="z-10 py-4 shadow-md bg-gray-300 dark:bg-gray-800">
+        <header class="z-10 py-4 shadow-md bg-white dark:bg-gray-800">
           <div
-            class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
+            class="container flex items-center justify-between h-full px-6 mx-auto text-red-600 dark:text-red-300"
           >
             <button
-              class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
+              class="p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-red"
               @click="toggleSideMenu"
               aria-label="Menu"
             >
@@ -312,7 +316,7 @@
             >
               <li class="flex">
                 <button
-                  class="rounded-md focus:outline-none focus:shadow-outline-purple"
+                  class="rounded-md focus:outline-none focus:shadow-outline-red"
                   @click="toggleTheme"
                   aria-label="Toggle color mode"
                 >
@@ -347,40 +351,21 @@
             </ul>
           </div>
         </header>
-        <main class="h-full overflow-y-auto">
+        <main class="h-full overflow-y-auto scroll-smooth">
           <div class="container px-6 mx-auto grid">
             <h2
-              class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
+              class="my-6 text-2xl font-semibold uppercase text-gray-700 dark:text-gray-200"
+              id="recruit"
             >
               Tuyển thành viên
             </h2>
-            <!-- <a
-              class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
-              href=""
-            >
-              <div class="flex items-center">
-                <svg
-                  class="w-5 h-5 mr-2"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-                  ></path>
-                </svg>
-                <span>Muốn tham gia câu lạc bộ?</span>
-              </div>
-              <span>Tham gia ngay với chúng mình &RightArrow;</span>
-            </a> -->
-            <!-- Cards -->
             <div class="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-3">
               <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-2">
                 <div
-                  class="flex items-center flex items-center p-4 bg-gray-300 rounded-lg shadow-xs dark:bg-gray-800"
-                  href=""
+                  class="flex items-center flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
                 >
                   <div
-                    class="p-3 mr-4 text-purple-500 bg-purple-100 rounded-full dark:text-purple-100 dark:bg-purple-500"
+                    class="p-3 mr-4 text-red-500 bg-red-100 rounded-full dark:bg-red-500"
                   >
                     <svg
                       class="w-5 h-5"
@@ -406,11 +391,11 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center flex items-center p-4 bg-gray-300 rounded-lg shadow-xs dark:bg-gray-800"
+                  class="flex items-center flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
                   href=""
                 >
                   <div
-                    class="p-3 mr-4 text-purple-500 bg-purple-100 rounded-full dark:text-purple-100 dark:bg-purple-500"
+                    class="p-3 mr-4 text-red-500 bg-red-100 rounded-full dark:bg-red-500"
                   >
                     <svg
                       class="w-5 h-5"
@@ -435,11 +420,11 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center flex items-center p-4 rounded-lg shadow-xs bg-gray-300 dark:bg-gray-800"
+                  class="flex items-center flex items-center p-4 rounded-lg shadow-xs bg-white dark:bg-gray-800"
                   href=""
                 >
                   <div
-                    class="p-3 mr-4 text-purple-500 bg-purple-100 rounded-full dark:text-purple-100 dark:bg-purple-500"
+                    class="p-3 mr-4 text-red-500 bg-red-100 rounded-full dark:bg-red-500"
                   >
                     <svg
                       class="w-5 h-5"
@@ -465,11 +450,11 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center flex items-center p-4 bg-gray-300 rounded-lg shadow-xs dark:bg-gray-800"
+                  class="flex items-center flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
                   href=""
                 >
                   <div
-                    class="p-3 mr-4 text-purple-500 bg-purple-100 rounded-full dark:text-purple-100 dark:bg-purple-500"
+                    class="p-3 mr-4 text-red-500 bg-red-100 rounded-full dark:bg-red-500"
                   >
                     <svg
                       class="w-5 h-5"
@@ -495,11 +480,11 @@
                   </div>
                 </div>
                 <div
-                  class="flex items-center flex items-center p-4 bg-gray-300 rounded-lg shadow-xs dark:bg-gray-800"
+                  class="flex items-center flex items-center p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
                   href=""
                 >
                   <div
-                    class="p-3 mr-4 text-purple-500 bg-purple-100 rounded-full dark:text-purple-100 dark:bg-purple-500"
+                    class="p-3 mr-4 text-red-500 bg-red-100 rounded-full dark:bg-red-500"
                   >
                     <svg
                       class="w-5 h-5"
@@ -525,10 +510,119 @@
                   </div>
                 </div>
               </div>
-              <a
-                class="flex items-center justify-between p-4 mb-8 text-sm font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+            </div>
+            <h2
+              class="my-6 text-2xl font-semibold uppercase text-gray-700 dark:text-gray-200"
+              id="about"
+            >
+              CLB KỸ SƯ PHẦN MỀM NHẬT BẢN - JS CLUB
+            </h2>
+            <div class="grid gap-6 mb-8 md:grid-cols-2 sm:grid-cols-1 h-screen">
+              <div class="flex justify-between items-center">
+                <span class="p-4 leading-10 indent-5">
+                  JS Club là tên viết tắt của
+                  <b class="text-red-700"
+                    >Japanese Software Engineers Club – Câu lạc bộ Kỹ sư phần
+                    mềm Nhật Bản</b
+                  >. Được thành lập vào tháng 2/2014, cái tên JS được đặt theo
+                  <b class="text-red-700"
+                    >một chuyên ngành hẹp của ngành Kỹ thuật phần mềm tại ĐH
+                    FPT</b
+                  >. Từ những ngày đầu thành lập, JS mang
+                  <b class="text-red-700"
+                    >sứ mệnh trở thành một cộng đồng kết nối các sinh viên theo
+                    chuyên ngành hẹp JS</b
+                  >. Sau này, câu lạc bộ được mở rộng, trở thành nơi chia sẻ
+                  kiến thức của các sinh viên
+                  <b class="text-red-700">YÊU THÍCH TIẾNG NHẬT</b> và
+                  <b class="text-red-700"> ĐAM MÊ LẬP TRÌNH</b>.
+                </span>
+              </div>
+              <div
+                class="relative rounded-lg shadow-md focus:outline-none focus:shadow-outline-red bg-red-600"
+                data-carousel="static"
               >
-                <div class="flex items-center">
+                <div
+                  class="overflow-hidden relative h-full rounded-lg"
+                  carousel-wrapper-hoc-thuat
+                ></div>
+                <div
+                  class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2"
+                >
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 1"
+                    data-carousel-slide-to="0"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 2"
+                    data-carousel-slide-to="1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 3"
+                    data-carousel-slide-to="2"
+                  ></button>
+                </div>
+                <!-- Slider controls -->
+                <button
+                  type="button"
+                  class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                  data-carousel-prev
+                >
+                  <span
+                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"
+                      ></path>
+                    </svg>
+                    <span class="hidden">Previous</span>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                  data-carousel-next
+                >
+                  <span
+                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                    <span class="hidden">Next</span>
+                  </span>
+                </button>
+                <!-- <div class="flex items-center">
                   <svg
                     class="w-5 h-5 mr-2"
                     fill="currentColor"
@@ -540,150 +634,533 @@
                   </svg>
                   <span>Muốn tham gia câu lạc bộ?</span>
                 </div>
-                <span>Tham gia ngay với chúng mình &RightArrow;</span>
-              </a>
+                <span>Tham gia ngay với chúng mình &RightArrow;</span> -->
+              </div>
+              <div
+                class="relative rounded-lg shadow-md focus:outline-none focus:shadow-outline-red bg-red-600"
+                data-carousel="static"
+              >
+                <div
+                  class="overflow-hidden relative h-full rounded-lg"
+                  carousel-wrapper-van-hoa
+                ></div>
+                <div
+                  class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2"
+                >
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 1"
+                    data-carousel-slide-to="0"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 2"
+                    data-carousel-slide-to="1"
+                  ></button>
+                  <button
+                    type="button"
+                    class="w-3 h-3 rounded-full"
+                    aria-current="false"
+                    aria-label="Slide 3"
+                    data-carousel-slide-to="2"
+                  ></button>
+                </div>
+                <!-- Slider controls -->
+                <button
+                  type="button"
+                  class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                  data-carousel-prev
+                >
+                  <span
+                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 19l-7-7 7-7"
+                      ></path>
+                    </svg>
+                    <span class="hidden">Previous</span>
+                  </span>
+                </button>
+                <button
+                  type="button"
+                  class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                  data-carousel-next
+                >
+                  <span
+                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      ></path>
+                    </svg>
+                    <span class="hidden">Next</span>
+                  </span>
+                </button>
+                <!-- <div class="flex items-center">
+                  <svg
+                    class="w-5 h-5 mr-2"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                    ></path>
+                  </svg>
+                  <span>Muốn tham gia câu lạc bộ?</span>
+                </div>
+                <span>Tham gia ngay với chúng mình &RightArrow;</span> -->
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="p-4 leading-10 indent-5"
+                  >Chúng mình rất tự hào về những giá trị chúng mình đem lại cho
+                  thành viên của mình. JS Club cũng là Câu lạc bộ đầu tiên và
+                  duy nhất tại Đại học FPT Hà Nội khi 10 lần liên tiếp được vinh
+                  danh tại Lễ tôn vinh với danh hiệu Câu lạc bộ xuất sắc. Nổi
+                  tiếng với danh hiệu
+                  <b class="text-red-700">“CLB có nhiều cóc vàng nhất”</b>, tuy
+                  nhiên không chỉ có mỗi học đâu nhé, JS cũng là<b
+                    class="text-red-700"
+                  >
+                    “nơi vui chơi có tổ chức”</b
+                  >
+                  để thoả mãn nhu cầu
+                  <b class="text-red-700">“được chill”</b> của các bạn trẻ.
+                </span>
+              </div>
             </div>
 
-            <!-- Charts -->
             <h2
               class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
             >
+              NHỮNG MẢNH GHÉP CỦA JS CLUB
+            </h2>
+            <div class="grid gap-6 mb-8 md:grid-cols-1 sm:grid-cols-1">
+              <div
+                class="relative rounded-lg bg-white shadow-xl grid gap-6 md:grid-cols-2 sm:grid-cols-1"
+              >
+                <div
+                  class="relative h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+                  style="min-height: 19rem"
+                >
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./assets/img/Van_hoa/2019_Fall_Teambuilding.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 w-full h-full bg-red-600 opacity-75"
+                  ></div>
+                  <div
+                    class="absolute inset-0 w-full h-full flex items-center justify-center fill-white text-white"
+                  >
+                    <h1 class="font-semibold uppercase text-3xl">
+                      Ban Nội dung
+                    </h1>
+                  </div>
+                  <svg
+                    class="hidden md:block absolute inset-y-0 inset-x-full h-full w-24 fill-white text-gray-100 -ml-12"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                  </svg>
+                </div>
+                <div class="h-full flex items-center bg-white rounded-lg">
+                  <div class="p-6 md:pr-12 md:pl-16 md:py-12 text-right">
+                    <p class="text-gray-600">
+                      <b class="text-red-700">Ban Nội dung</b> chính là một phần
+                      cấu tạo nên JS với nhiệm vụ
+                      <b class="text-red-700"
+                        >lên nội dung, lên ý tưởng, concept cho các sự kiện</b
+                      >. Làm việc ở ban Nội dung, bạn còn cần có một
+                      <b class="text-red-700"
+                        >tinh thần vô cùng trách nhiệm, kỹ năng làm việc nhóm</b
+                      >
+                      vì họ thường xuyên phải
+                      <b class="text-red-700">phối hợp</b> với các phân ban khác
+                      để làm nên một
+                      <b class="text-red-700">chương trình thành công</b>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="relative rounded-lg bg-white shadow-xl grid gap-6 md:grid-cols-2 sm:grid-cols-1"
+              >
+                <div class="h-full flex items-center bg-white rounded-lg">
+                  <div class="p-6 md:pr-12 md:pl-16 md:py-12 text-left">
+                    <p class="text-gray-600">
+                      <b class="text-red-700">“Khéo léo”</b>,
+                      <b class="text-red-700">“nhanh nhạy”</b> và
+                      <b class="text-red-700">“hoạt bát”</b> là những tính từ
+                      khi nhắc đến con người của Đối ngoại. Nếu ban Văn hóa là
+                      sợi dây gắn kết thành viên trong JS thì Đối ngoại chính là
+                      <b class="text-red-700">
+                        cầu nối JS với các CLB cũng như tổ chức trong và ngoài
+                        phạm vi FPT</b
+                      >.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="relative h-full overflow-hidden rounded-b-lg md:rounded-b-none md:rounded-r-lg"
+                  style="min-height: 19rem"
+                >
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./assets/img/Van_hoa/2019_Fall_Teambuilding.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 w-full h-full bg-red-600 opacity-75"
+                  ></div>
+                  <div
+                    class="absolute inset-0 w-full h-full flex items-center justify-center fill-white text-white"
+                  >
+                    <h1 class="font-semibold uppercase text-3xl">
+                      Ban Đối ngoại
+                    </h1>
+                  </div>
+                  <svg
+                    class="hidden md:block absolute inset-y-0 h-full w-24 fill-white text-gray-100 -ml-12"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="relative rounded-lg bg-white shadow-xl grid gap-6 md:grid-cols-2 sm:grid-cols-1"
+              >
+                <div
+                  class="relative h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+                  style="min-height: 19rem"
+                >
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./assets/img/Van_hoa/2019_Fall_Teambuilding.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 w-full h-full bg-red-600 opacity-75"
+                  ></div>
+                  <div
+                    class="absolute inset-0 w-full h-full flex items-center justify-center fill-white text-white"
+                  >
+                    <h1 class="font-semibold uppercase text-3xl">
+                      Ban Chuyên Môn
+                    </h1>
+                  </div>
+                  <svg
+                    class="hidden md:block absolute inset-y-0 inset-x-full h-full w-24 fill-white text-gray-100 -ml-12"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                  </svg>
+                </div>
+                <div class="h-full flex items-center bg-white rounded-lg">
+                  <div class="p-6 md:pr-12 md:pl-16 md:py-12 text-right">
+                    <p class="text-gray-600">
+                      <b class="text-red-700">Ban Chuyên môn</b> là ban giúp
+                      <b class="text-red-700"
+                        >duy trì và phát triển khả năng chuyên môn</b
+                      >
+                      của tất cả các thành viên trong JS. Không những vậy, ban
+                      chuyên môn là nơi
+                      <b class="text-red-700">đào tạo các team thi đấu</b> cho
+                      những cuộc thi lập trình cũng như
+                      <b class="text-red-700"
+                        >trau dồi kiến thức và tổ chức các lớp training</b
+                      >. Ngoài ra ban Chuyên Môn cũng tham gia tổ chức các sự
+                      kiện của JS với vai trò
+                      <b class="text-red-700"
+                        >xây dựng những phần nội dung học thuật</b
+                      >
+                    </p>
+                  </div>
+                  <svg
+                    class="hidden md:block absolute inset-y-0 h-full w-24 fill-white text-gray-100 -ml-12"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="relative rounded-lg bg-white shadow-xl grid gap-6 md:grid-cols-2 sm:grid-cols-1"
+              >
+                <div class="h-full flex items-center bg-white rounded-lg">
+                  <div class="p-6 md:pr-12 md:pl-16 md:py-12 text-left">
+                    <p class="text-gray-600">
+                      <b class="text-red-700">Ban Truyền Thông</b> đóng vai trò
+                      như là <b class="text-red-700">“The Face”</b> của CLB với
+                      nhiệm vụ
+                      <b class="text-red-700">tạo nên “giao diện” </b> và
+                      <b class="text-red-700">đưa hình ảnh của CLB</b> thông qua
+                      nền tảng xã hội đến với mọi người. Hoạt động với 3 mảng
+                      chính:
+                      <b class="text-red-700">viết bài, thiết kế và media</b>,
+                      các bạn có thể thỏa sức sáng tạo, bắt trend với các
+                      concept khác nhau tại các phân ban.
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="relative h-full overflow-hidden rounded-b-lg md:rounded-b-none md:rounded-r-lg"
+                  style="min-height: 19rem"
+                >
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./assets/img/Van_hoa/2019_Fall_Teambuilding.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 w-full h-full bg-red-600 opacity-75"
+                  ></div>
+                  <div
+                    class="absolute inset-0 w-full h-full flex items-center justify-center fill-white text-white"
+                  >
+                    <h1 class="font-semibold uppercase text-3xl">
+                      Ban Truyền thông
+                    </h1>
+                  </div>
+                  <svg
+                    class="hidden md:block absolute inset-y-0 h-full w-24 fill-white text-gray-100 -ml-12"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="relative rounded-lg bg-white shadow-xl grid gap-6 md:grid-cols-2 sm:grid-cols-1"
+              >
+                <div
+                  class="relative h-full overflow-hidden rounded-t-lg md:rounded-t-none md:rounded-l-lg"
+                  style="min-height: 19rem"
+                >
+                  <img
+                    class="absolute inset-0 w-full h-full object-cover object-center"
+                    src="./assets/img/Van_hoa/2019_Fall_Teambuilding.jpg"
+                    alt=""
+                  />
+                  <div
+                    class="absolute inset-0 w-full h-full bg-red-600 opacity-75"
+                  ></div>
+                  <div
+                    class="absolute inset-0 w-full h-full flex items-center justify-center fill-white text-white"
+                  >
+                    <h1 class="font-semibold uppercase text-3xl">
+                      Ban văn hóa
+                    </h1>
+                  </div>
+                  <svg
+                    class="hidden md:block absolute inset-y-0 inset-x-full h-full w-24 fill-white text-gray-100 -ml-12"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                  </svg>
+                </div>
+                <div class="h-full flex items-center bg-white rounded-lg">
+                  <div class="p-6 md:pr-12 md:pl-16 md:py-12 text-right">
+                    <p class="text-gray-600">
+                      <b class="text-red-700"> Ban Văn hóa,</b> , linh hồn của
+                      JS Club,
+                      <b class="text-red-700"
+                        >giúp kết nối các thành viên trong CLB</b
+                      >.
+                      <b class="text-red-700">
+                        Với vai trò là người truyền lửa cho CLB,</b
+                      >
+                      các thành viên ban văn hóa luôn là
+                      <b class="text-red-700"> lực lượng nòng cốt</b>, trực tiếp
+                      chạy các sự kiện của JS và
+                      <b class="text-red-700">lên dây cót tinh thần</b>
+                      cho các cuộc chơi.
+                    </p>
+                  </div>
+                  <svg
+                    class="hidden md:block absolute inset-y-0 h-full w-24 fill-white text-gray-100 -ml-12"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="none"
+                  >
+                    <polygon points="50,0 100,0 50,100 0,100"></polygon>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <h2
+              class="my-6 text-2xl font-semibold uppercase text-gray-700 dark:text-gray-200"
+              id="timeline"
+            >
               Timeline
             </h2>
-            <ol class="border-l-2 border-purple-600">
-              <li>
-                <div class="md:flex flex-start">
-                  <div
-                    class="bg-purple-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3"
+            <ol class="relative border-l border-red-600">
+              <li class="mb-10 ml-6">
+                <span
+                  class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-red-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-red-900"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-3 h-3 text-red-600 dark:text-red-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      class="text-white w-3 h-3"
-                      role="img"
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+                <div
+                  class="flex flex-col items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+                >
+                  <h3
+                    class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+                  >
+                    Vòng mở đơn
+                  </h3>
+                  <time
+                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                    >26 / 12 / 2022 - 04 / 01 / 2022
+                  </time>
+                  <p
+                    class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Get access to over 20+ pages including a dashboard layout,
+                    charts, kanban board, calendar, and pre-order E-commerce &
+                    Marketing pages.
+                  </p>
+                  <a
+                    href="#"
+                    class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-red-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-red-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                    ><svg
+                      class="mr-2 w-4 h-4"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
                       xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512"
                     >
                       <path
-                        fill="currentColor"
-                        d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
+                        fill-rule="evenodd"
+                        d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                        clip-rule="evenodd"
                       ></path>
                     </svg>
-                  </div>
-                  <div
-                    class="block p-6 bg-gray-300 rounded-lg shadow-xs dark:bg-gray-800 max-w-md ml-6 mb-10"
+                    Download ZIP</a
                   >
-                    <div class="flex justify-between mb-4">
-                      <a
-                        href="#!"
-                        class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                        >Mở đơn</a
-                      >
-                      <a
-                        href="#!"
-                        class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                        >26 / 12 / 2022 - 04 / 01 / 2023</a
-                      >
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Quisque scelerisque diam non nisi semper, et elementum
-                      lorem ornare. Maecenas placerat facilisis mollis. Duis
-                      sagittis ligula in sodales vehicula.
-                    </p>
-                  </div>
                 </div>
               </li>
-              <li>
-                <div class="md:flex flex-start">
-                  <div
-                    class="bg-purple-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3"
+              <li class="mb-10 ml-6">
+                <span
+                  class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-red-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-red-900"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-3 h-3 text-red-600 dark:text-red-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      class="text-white w-3 h-3"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div
-                    class="block p-6 bg-gray-300 rounded-lg shadow-xs dark:bg-gray-800 max-w-md ml-6 mb-10"
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+                <div
+                  class="flex flex-col items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+                >
+                  <h3
+                    class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
                   >
-                    <div class="flex justify-between mb-4">
-                      <a
-                        href="#!"
-                        class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                        >Phỏng vấn</a
-                      >
-                      <a
-                        href="#!"
-                        class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                        >06 / 01 / 2023 - 09 / 01 / 2023</a
-                      >
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Quisque scelerisque diam non nisi semper, et elementum
-                      lorem ornare. Maecenas placerat facilisis mollis. Duis
-                      sagittis ligula in sodales vehicula.
-                    </p>
-                  </div>
+                    Vòng phỏng vấn
+                  </h3>
+                  <time
+                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                    >06 / 01 / 2022 - 09 / 01 / 2022
+                  </time>
+                  <p
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    All of the pages and components are first designed in Figma
+                    and we keep a parity between the two versions even as we
+                    update the project.
+                  </p>
                 </div>
               </li>
-              <li>
-                <div class="md:flex flex-start">
-                  <div
-                    class="bg-purple-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3"
+              <li class="ml-6">
+                <span
+                  class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-red-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-red-900"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="w-3 h-3 text-red-600 dark:text-red-400"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      class="text-white w-3 h-3"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 448 512"
-                    >
-                      <path
-                        fill="currentColor"
-                        d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div
-                    class="block p-6 bg-gray-300 rounded-lg shadow-xs dark:bg-gray-800 max-w-md ml-6 mb-10"
+                    <path
+                      fill-rule="evenodd"
+                      d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                      clip-rule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+                <div
+                  class="flex flex-col items-start p-4 bg-white rounded-lg shadow-xs dark:bg-gray-800"
+                >
+                  <h3
+                    class="mb-1 text-lg font-semibold text-gray-900 dark:text-white"
                   >
-                    <div class="flex justify-between mb-4">
-                      <a
-                        href="#!"
-                        class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                        >Thử thách
-                      </a>
-                      <a
-                        href="#!"
-                        class="font-medium text-purple-600 hover:text-purple-700 focus:text-purple-800 duration-300 transition ease-in-out text-sm"
-                        >11 / 01 / 2023 - 11 / 02 / 2023</a
-                      >
-                    </div>
-                    <p class="text-gray-600 dark:text-gray-400 mb-6">
-                      Libero expedita explicabo eius fugiat quia aspernatur
-                      autem laudantium error architecto recusandae natus
-                      sapiente sit nam eaque, consectetur porro molestiae ipsam
-                      an deleniti.
-                    </p>
-                  </div>
+                    Vòng thử thách
+                  </h3>
+                  <time
+                    class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+                    >11 / 01 / 2022 - 11 / 02 / 2022
+                  </time>
+                  <p
+                    class="text-base font-normal text-gray-500 dark:text-gray-400"
+                  >
+                    Get started with dozens of web components and interactive
+                    elements built on top of Tailwind CSS.
+                  </p>
                 </div>
               </li>
             </ol>
+
             <h2
               class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200"
             >
@@ -698,7 +1175,7 @@
                 x-init="start()"
               >
                 <div
-                  class="w-24 mx-1 p-2 font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple rounded-lg"
+                  class="w-24 mx-1 p-2 font-semibold text-red-100 bg-red-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-red rounded-lg"
                 >
                   <div class="font-mono leading-none" x-text="days">00</div>
                   <div class="font-mono uppercase text-sm leading-none">
@@ -706,7 +1183,7 @@
                   </div>
                 </div>
                 <div
-                  class="w-24 mx-1 p-2 font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+                  class="w-24 mx-1 p-2 font-semibold text-red-100 bg-red-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-red"
                 >
                   <div class="font-mono leading-none" x-text="hours">00</div>
                   <div class="font-mono uppercase text-sm leading-none">
@@ -714,7 +1191,7 @@
                   </div>
                 </div>
                 <div
-                  class="w-24 mx-1 p-2 font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+                  class="w-24 mx-1 p-2 font-semibold text-red-100 bg-red-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-red"
                 >
                   <div class="font-mono leading-none" x-text="minutes">00</div>
                   <div class="font-mono uppercase text-sm leading-none">
@@ -722,7 +1199,7 @@
                   </div>
                 </div>
                 <div
-                  class="w-24 mx-1 p-2 font-semibold text-purple-100 bg-purple-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-purple"
+                  class="w-24 mx-1 p-2 font-semibold text-red-100 bg-red-600 rounded-lg shadow-md focus:outline-none focus:shadow-outline-red"
                 >
                   <div class="font-mono leading-none" x-text="seconds">00</div>
                   <div class="font-mono uppercase text-sm leading-none">
@@ -734,127 +1211,17 @@
           </div>
           <footer
             class="text-center lg:text-left bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200"
+            id="contact"
           >
-            <div
-              class="flex justify-between items-center lg:justify-center p-6 border-b border-gray-300"
-            >
-              <div class="mr-12 block lg:hidden">
-                <span>Liên hệ với chúng mình qua:</span>
-              </div>
-              <div class="flex justify-center">
-                <a href="#!" class="mr-6">
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="facebook-f"
-                    class="w-2.5"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 320 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                    ></path>
-                  </svg>
-                </a>
-                <a href="#!" class="mr-6">
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="twitter"
-                    class="w-4"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                    ></path>
-                  </svg>
-                </a>
-                <a href="#!" class="mr-6">
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="google"
-                    class="w-3.5"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 488 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"
-                    ></path>
-                  </svg>
-                </a>
-                <a href="#!" class="mr-6">
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="instagram"
-                    class="w-3.5"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                    ></path>
-                  </svg>
-                </a>
-                <a href="#!" class="mr-6">
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="linkedin-in"
-                    class="w-3.5"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                    ></path>
-                  </svg>
-                </a>
-                <a href="#!">
-                  <svg
-                    aria-hidden="true"
-                    focusable="false"
-                    data-prefix="fab"
-                    data-icon="github"
-                    class="w-4"
-                    role="img"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 496 512"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
-            </div>
             <div class="mx-6 my-6 lg:text-center text-left">
               <div class="grid grid-1 md:grid-cols-3 gap-8">
                 <div class="mx-2">
-                  <h6
-                    class="uppercase font-semibold mb-4 flex lg:justify-center justify-start"
+                  <h2
+                    class="my-6 text-2xl font-semibold text-left uppercase text-gray-700 dark:text-gray-200"
                   >
                     Liên hệ
-                  </h6>
-                  <div class="flex items-start rounded-lg shadow-xs mb-4">
+                  </h2>
+                  <div class="flex items-start rounded-lg mb-4">
                     <div class="mt-2">
                       <svg
                         aria-hidden="true"
@@ -872,13 +1239,13 @@
                         ></path>
                       </svg>
                     </div>
-                    <p>
+                    <p class="text-left">
                       Đại học FPT, Khu Công nghệ cao Hòa Lạc, KM 29 Đại lộ Thăng
                       Long, Hà Nội, Việt Nam.
                     </p>
                   </div>
 
-                  <div class="flex items-center rounded-lg shadow-xs mb-4">
+                  <div class="flex items-center rounded-lg mb-4">
                     <a href="mailto:jsclub.fpt@gmail.com">
                       <svg
                         aria-hidden="true"
@@ -900,7 +1267,7 @@
                       jsclub.fpt@gmail.com
                     </a>
                   </div>
-                  <div class="flex items-end rounded-lg shadow-xs mb-4">
+                  <div class="flex items-end rounded-lg mb-4">
                     <div class="mb-2">
                       <svg
                         aria-hidden="true"
@@ -918,16 +1285,16 @@
                         ></path>
                       </svg>
                     </div>
-                    <div>
-                      <p
+                    <a href="tel:+84375470304">
+                      <div
                         class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
                       >
                         Mr. Nguyễn Phạm Nam Dũng
-                      </p>
-                      <p>0375 470 304</p>
-                    </div>
+                      </div>
+                      <p class="text-left">0375 470 304</p>
+                    </a>
                   </div>
-                  <div class="flex items-end rounded-lg shadow-xs mb-4">
+                  <div class="flex items-end rounded-lg mb-4">
                     <div class="mb-2">
                       <svg
                         aria-hidden="true"
@@ -945,76 +1312,245 @@
                         ></path>
                       </svg>
                     </div>
-                    <div>
+                    <a href="tel:+84978407765">
                       <p
                         class="mb-2 text-sm font-medium text-gray-600 dark:text-gray-400"
                       >
                         Mr. Đào Xuân Quý
                       </p>
                       <p>0978 407 765</p>
-                    </div>
+                    </a>
                   </div>
-                  <p
-                    class="flex items-center lg:justify-center justify-start mb-4"
-                  >
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      data-icon="print"
-                      class="w-4 mr-4"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
+                  <div class="flex items-center rounded-lg mb-4">
+                    <a href="mailto:jsclub.fpt@gmail.com">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="envelope"
+                        class="w-4 mr-4"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.facebook.com/fu.jsclub"
+                      target="_blank"
                     >
-                      <path
-                        fill="currentColor"
-                        d="M448 192V77.25c0-8.49-3.37-16.62-9.37-22.63L393.37 9.37c-6-6-14.14-9.37-22.63-9.37H96C78.33 0 64 14.33 64 32v160c-35.35 0-64 28.65-64 64v112c0 8.84 7.16 16 16 16h48v96c0 17.67 14.33 32 32 32h320c17.67 0 32-14.33 32-32v-96h48c8.84 0 16-7.16 16-16V256c0-35.35-28.65-64-64-64zm-64 256H128v-96h256v96zm0-224H128V64h192v48c0 8.84 7.16 16 16 16h48v96zm48 72c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z"
-                      ></path>
-                    </svg>
-                    + 01 234 567 89
-                  </p>
+                      JS Club - Japanese Software Engineers
+                    </a>
+                  </div>
+                  <div class="flex items-center rounded-lg mb-4">
+                    <a href="mailto:jsclub.fpt@gmail.com">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        data-prefix="fas"
+                        data-icon="envelope"
+                        class="w-4 mr-4"
+                        role="img"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 512 512"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
+                        ></path>
+                      </svg>
+                    </a>
+                    <a
+                      href="https://www.instagram.com/fptu.jsclub"
+                      target="_blank"
+                    >
+                      fptu.jsclub
+                    </a>
+                  </div>
                 </div>
                 <div class="col-span-2">
-                  <h6
-                    class="uppercase font-semibold mb-4 flex items-center justify-center md:justify-start"
+                  <div
+                    class="relative h-full rounded-lg shadow-md focus:outline-none focus:shadow-outline-red bg-red-600"
+                    data-carousel="static"
                   >
-                    <svg
-                      aria-hidden="true"
-                      focusable="false"
-                      data-prefix="fas"
-                      data-icon="cubes"
-                      class="w-4 mr-3"
-                      role="img"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 512 512"
+                    <div
+                      class="overflow-hidden relative h-full rounded-lg"
+                      carousel-wrapper-van-hoa
+                    ></div>
+                    <div
+                      class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2"
                     >
-                      <path
-                        fill="currentColor"
-                        d="M488.6 250.2L392 214V105.5c0-15-9.3-28.4-23.4-33.7l-100-37.5c-8.1-3.1-17.1-3.1-25.3 0l-100 37.5c-14.1 5.3-23.4 18.7-23.4 33.7V214l-96.6 36.2C9.3 255.5 0 268.9 0 283.9V394c0 13.6 7.7 26.1 19.9 32.2l100 50c10.1 5.1 22.1 5.1 32.2 0l103.9-52 103.9 52c10.1 5.1 22.1 5.1 32.2 0l100-50c12.2-6.1 19.9-18.6 19.9-32.2V283.9c0-15-9.3-28.4-23.4-33.7zM358 214.8l-85 31.9v-68.2l85-37v73.3zM154 104.1l102-38.2 102 38.2v.6l-102 41.4-102-41.4v-.6zm84 291.1l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6zm240 112l-85 42.5v-79.1l85-38.8v75.4zm0-112l-102 41.4-102-41.4v-.6l102-38.2 102 38.2v.6z"
-                      ></path>
-                    </svg>
-                    Tailwind ELEMENTS
-                  </h6>
-                  <p>
-                    Here you can use rows and columns to organize your footer
-                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit.
-                  </p>
+                      <button
+                        type="button"
+                        class="w-3 h-3 rounded-full"
+                        aria-current="false"
+                        aria-label="Slide 1"
+                        data-carousel-slide-to="0"
+                      ></button>
+                      <button
+                        type="button"
+                        class="w-3 h-3 rounded-full"
+                        aria-current="false"
+                        aria-label="Slide 2"
+                        data-carousel-slide-to="1"
+                      ></button>
+                      <button
+                        type="button"
+                        class="w-3 h-3 rounded-full"
+                        aria-current="false"
+                        aria-label="Slide 3"
+                        data-carousel-slide-to="2"
+                      ></button>
+                    </div>
+                    <!-- Slider controls -->
+                    <button
+                      type="button"
+                      class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                      data-carousel-prev
+                    >
+                      <span
+                        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                      >
+                        <svg
+                          class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 19l-7-7 7-7"
+                          ></path>
+                        </svg>
+                        <span class="hidden">Previous</span>
+                      </span>
+                    </button>
+                    <button
+                      type="button"
+                      class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+                      data-carousel-next
+                    >
+                      <span
+                        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
+                      >
+                        <svg
+                          class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                          ></path>
+                        </svg>
+                        <span class="hidden">Next</span>
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="text-center p-6 bg-gray-200">
-              <span>© 2021 Copyright:</span>
-              <a
-                class="text-gray-600 font-semibold"
-                href="https://tailwind-elements.com/"
-                >Tailwind Elements</a
-              >
             </div>
           </footer>
         </main>
       </div>
     </div>
+    <script>
+      const wrapper_hocthuat = $("[carousel-wrapper-hoc-thuat]"),
+        wrapper_vanhoa = $("[carousel-wrapper-van-hoa]");
+      images_hocThuat.map((x) => {
+        wrapper_hocthuat.append(
+          '<div class="hidden duration-700 ease-in-out" data-carousel-item><span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800" >' +
+            x.name +
+            '</span><img src="' +
+            x.imgurl +
+            '" class="block absolute w-full -translate-x-1/2 -translate-y-1/2" alt="' +
+            x.name +
+            '"/></div>'
+        );
+      });
+      images_vanhoa.map((x) => {
+        wrapper_vanhoa.append(
+          '<div class="hidden duration-700 ease-in-out" data-carousel-item><span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800" >' +
+            x.name +
+            '</span><img src="' +
+            x.imgurl +
+            '" class="block absolute w-full -translate-x-1/2 -translate-y-1/2" alt="' +
+            x.name +
+            '"/></div>'
+        );
+      });
+      const items_van_hoa = [
+        ...document.querySelectorAll(
+          "[carousel-wrapper-van-hoa] [data-carousel-item]"
+        ),
+      ].map((x, index) => ({
+        position: index,
+        el: x,
+      }));
+
+      const options_van_hoa = {
+        activeItemPosition: 1,
+        interval: 3000,
+
+        indicators: {
+          activeClasses: "bg-white dark:bg-gray-800",
+          inactiveClasses:
+            "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
+          items: [
+            ...document.querySelectorAll(
+              "[carousel-wrapper-van-hoa] [data-carousel-slide-to]"
+            ),
+          ].map((x, index) => ({
+            position: index,
+            el: x,
+          })),
+        },
+      };
+      const items_hoc_thuat = [
+        ...document.querySelectorAll(
+          "[carousel-wrapper-hoc-thuat] [data-carousel-item]"
+        ),
+      ].map((x, index) => ({
+        position: index,
+        el: x,
+      }));
+
+      const options_hoc_thuat = {
+        activeItemPosition: 1,
+        interval: 3000,
+
+        indicators: {
+          activeClasses: "bg-white dark:bg-gray-800",
+          inactiveClasses:
+            "bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800",
+          items: [
+            ...document.querySelectorAll(
+              "[carousel-wrapper-hoc-thuat] [data-carousel-slide-to]"
+            ),
+          ].map((x, index) => ({
+            position: index,
+            el: x,
+          })),
+        },
+      };
+      const carousel_van_hoa = new Carousel(items_van_hoa, options_van_hoa);
+      const carousel_hoc_thuat = new Carousel(
+        items_hoc_thuat,
+        options_hoc_thuat
+      );
+      console.log(carousel_hoc_thuat);
+      console.log(carousel_van_hoa);
+    </script>
   </body>
 </html>
